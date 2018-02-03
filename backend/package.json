@@ -1,0 +1,19 @@
+{
+  "name": "garbougie-backend",
+  "version": "1.0.0",
+  "description": "garbougie booty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoomSyrup/Garbougie.git"
+  },
+  "author": "Kishan, Juliana, Byron, Antoine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoomSyrup/Garbougie/issues"
+  },
+  "homepage": "https://github.com/BoomSyrup/Garbougie#readme"
+}
