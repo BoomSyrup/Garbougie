@@ -1,8 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var fs = require('fs');
 
+var fs = require('fs');
 var jsonData = fs.readFileSync('nodes.json');
+
 var data = JSON.parse(jsonData);
 
 var app = express();
@@ -10,6 +11,7 @@ var server = app.listen(process.env.PORT || 8080, () => console.log('Server is r
 var tt_key = process.env.TT_KEY;
 
 app.use(express.static('public'));
+// app.use(bodyParser.json({ type: 'application/*+json' }))
 
 //Get all
 app.get('/all', getAll);
@@ -18,23 +20,25 @@ function getAll(res, res){
 }
 
 //Route for the user to go and post from the app
-app.post('/pickup/:', requestPickup);
-function requestPickup(res, res){
-  var node =  req.body;
+app.get('/pickup', requestPickup);
+function requestPickup(req, res){
+	var id = data.nodes.length + 1;
+	var latitude = req.query.latitude;
+	var longitude = req.query.longitude;
+	var nodeObj = {
+		id: id,
+		latitude: latitude,
+		longitude: longitude
+	}
 
-  if (typeof node.id == 'undefined' ||
-      typeof node.latitude == 'undefined' ||
-      typeof node.longitude == 'undefined') {
-        res.status(400);
-				return;
-  }
+	console.log(JSON.stringify(nodeObj))
 
-  data.nodes.push(node);
-  var newData = JSON.stringify(data, null, 3);
-  fs.writeFile('questions.json', newData, function(err){
-    if (err) throw err;
+	data.nodes.push(nodeObj);
+	var newData = JSON.stringify(data, null, 3);
+	fs.writeFile('nodes.json', newData, function(err){
+		if (err) throw err;
 		return;
-  });
-
-  res.status(200);
+	});
+	res.status(200);
+	res.send(data.nodes);
 }
