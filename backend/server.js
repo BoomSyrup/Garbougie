@@ -7,15 +7,14 @@ var data = JSON.parse(jsonData);
 
 var app = express();
 var server = app.listen(process.env.PORT || 8080, () => console.log('Server is running!'));
-
-var tt_key process.env.TT_KEY;
+var tt_key = process.env.TT_KEY;
 
 app.use(express.static('public'));
 
-//Get all nodes
-app.get('/nodes', getAll);
+//Get all
+app.get('/all', getAll);
 function getAll(res, res){
-	res.send(data);
+	res.send(data.nodes);
 }
 
 //Route for the user to go and post from the app
@@ -27,12 +26,14 @@ function requestPickup(res, res){
       typeof node.latitude == 'undefined' ||
       typeof node.longitude == 'undefined') {
         res.status(400);
+				return;
   }
 
   data.nodes.push(node);
   var newData = JSON.stringify(data, null, 3);
   fs.writeFile('questions.json', newData, function(err){
     if (err) throw err;
+		return;
   });
 
   res.status(200);
