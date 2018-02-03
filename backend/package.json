@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BoomSyrup/Garbougie/issues"
   },
-  "homepage": "https://github.com/BoomSyrup/Garbougie#readme"
+  "homepage": "https://github.com/BoomSyrup/Garbougie#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
