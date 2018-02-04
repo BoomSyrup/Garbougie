@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export default class Login extends Component{
- 
+
   constructor(props){
     super(props);
     this.state = {
@@ -29,14 +29,26 @@ export default class Login extends Component{
   renderLogin = () => {
     if (!this.state.invalidLogin){
       return (
-        <div className="login">
-          <h1>Garbougie</h1>
-          <form className="login-form" onSubmit={this.handleLogin.bind(this)} >
-              <input type="text" placeholder="Username" ref="loginInput"></input>
-              <input type="text" placeholder="Password" ref="passwordInput"></input>
-              <button className="login-button">Login</button>
-          </form>
-        </div>
+        // <div className="login">
+        //   <h1>Garbougie</h1>
+        //   <form className="login-form" onSubmit={this.handleLogin.bind(this)} >
+        //       <input type="text" placeholder="Username" ref="loginInput"></input>
+        //       <input type="text" placeholder="Password" ref="passwordInput"></input>
+        //       <button className="login-button">Login</button>
+        //   </form>
+        // </div>
+        <section className="hero is-info is-fullheight">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">
+                Garbougie
+              </h1>
+              <h2 className="subtitle">
+                On-demand garbage collection
+              </h2>
+            </div>
+          </div>
+        </section>
       )
     }
     if (this.state.invalidLogin === true){
@@ -51,7 +63,7 @@ export default class Login extends Component{
                 <button >Login</button>
                 <p className="login-button">Invalid Login!</p>
             </form>
-          </div> 
+          </div>
       )
     }
   }
@@ -66,4 +78,3 @@ export default class Login extends Component{
 
 
 }
-
