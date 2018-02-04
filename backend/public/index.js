@@ -73,26 +73,39 @@ var data = {
       for(obj in dataArr)
       {
         dataArr[obj] = JSON.parse(dataArr[obj]);
-        console.log(dataArr[obj]);
       }
       var start = 0, //whenever given input, the first point is the starting location of the truck
           next = 0,
           min = Number.MAX_VALUE;
+      for(element in dataArr)
+      {
+        for(key in element)
+        if (dataArr[element].hasOwnProperty(key))
+        {
+          if(key == dataArr[start].id)
+          {
+            delete dataArr[element].key;//delete all values of next point so that it won't be added to route multiple times
+          }
+        }
+      }
       while(dataArr.length > 0)
       {
         //find closest stop
           for(time in dataArr[start].times)
           {
-            console.log(dataArr[start].times, "\n",dataArr[start].times.time);
-            if(dataArr[start].times.time < min)
+            if(dataArr[start]["times"][time] < min )
             {
-              min = dataArr[start].times.time;
+              min = dataArr[start]["times"].time;
               next = time;
             }
           }
           route.push(dataArr[start].id);
           dataArr.splice(start, 1); //delete old starting point from available points
-          next = dataArr.indexOf(next);
+          for(el in dataArr)
+          {
+            if(dataArr[el]['id'] == next)
+              next = el;
+          }
           start = next;
           for(element in dataArr)
           {
