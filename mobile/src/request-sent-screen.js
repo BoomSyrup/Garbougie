@@ -5,7 +5,7 @@ export default class RequestSentScreen extends Component{
   constructor(props){
     super(props);
     this.state = {
-      progressBarStage: 33
+      progressBarStage: 50
       // 4 stages are Request Sent,
     };
   }
@@ -33,16 +33,14 @@ export default class RequestSentScreen extends Component{
               <div className="progress-pointer">
                 <div className="quarter">^</div>
                 <div className="quarter">^</div>
-                <div className="quarter">^</div>
               </div>
               <div className="last-progress-pointer"><div>^</div></div>
               <div className="progress-labels">
                 <div className="quarter">Request Received</div>
                 <div className="quarter">On Route</div>
-                <div className="quarter">???</div>
               </div>
-              <div className="last-label-pointer"><div>Finished!</div></div>
-              <button className="button is-info last-button">Do something</button>
+              <div className="last-label-pointer"><div>Complete!</div></div>
+              <button className="button is-danger last-button" onClick={this.props.logOut}>Log Out</button>
             </div>
           </div>
         </section>

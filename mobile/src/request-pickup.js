@@ -16,16 +16,17 @@ export default class RequestPickup extends Component{
               <section class="hero is-info is-fullheight">
                 <div class="hero-body">
                   <div class="container pickup-container">
+                    <img src="https://i.imgur.com/EMmN1K4.jpg"></img>
                     <h1 class="title">
                       Pick up Garbage at:
                     </h1>
-                    <h2 class="subtitle">
+                    <h2 class="subtitle2">
                       {this.props.address}
                     </h2>
                         <div className="pickup-section">
                              <button className="button is-success is-large pickup-button" onClick={this.requestSent}>Pick Up</button>
                             <div className="pickup-footer">
-                              <button className="button is-danger logout-button">Logout</button>
+                              <button className="button is-danger logout-button" onClick={this.props.logOut}>Logout</button>
                           </div>
                        </div>
                   </div>
@@ -34,9 +35,11 @@ export default class RequestPickup extends Component{
           );
       }
       if (this.state.requestSent === true){
-          return (<RequestSentScreen />);
+          return (<RequestSentScreen logOut={this.props.logOut}/>);
       } 
   }
+
+
 
   requestSent = () => {
     let latitude = 0;

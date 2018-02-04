@@ -61,7 +61,7 @@
 }
 
 .quarter{
-  width: 33%;
+  width: 50%;
 }
 
 .last{
@@ -111,10 +111,13 @@
 }
 
 .last-button{
-  width: 50%;
+  width: 140px;
   margin-bottom: 100px;
   margin-top: -50px;
 }
 
-
+.subtitle2{
+  text-align: center;
+  margin-bottom: 10px;
+}
 

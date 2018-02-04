@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kishan Emens</title>
+  <title>Garbougie</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
@@ -21,11 +21,25 @@
 <body>
 <section class="hero is-dark is-fullheight">
   <div class="hero-body">
+    <h1 class="title">Garbougie backend dashboard</h1>
+  </div>
+  <div class="hero-body">
     <div class="container is-fullhd">
-      <div class="box main-content">
-          <code>http://f7c43a95.ngrok.io/pickup/?lng=1&lat=1</code>
-          <button></button>
-      </div>
+        <h2 class="subtitle is-dark is-marginless">Get all</h2>
+        <code>http://f7c43a95.ngrok.io/all</code>
+        <br><br>
+        <h2 class="subtitle is-dark is-marginless">Get one</h2>
+        <code>http://f7c43a95.ngrok.io/node?id=1</code>
+        <br><br>
+        <h2 class="subtitle is-dark is-marginless">Remove All</h2>
+        <code>http://f7c43a95.ngrok.io/remove</code>
+        <br><br>
+        <h2 class="subtitle is-dark is-marginless">Posting a new pickup</h2>
+        <code>http://f7c43a95.ngrok.io/pickup/?lng=1&lat=1</code>
+        <br><br>
+        <h2 class="subtitle is-dark is-marginless">Changing status on pickup</h2>
+        <code>http://f7c43a95.ngrok.io/delivered?id=1&completed=1</code>
+        <!-- <a class="button">Start the new day</a> -->
     </div>
   </div>
 </section>

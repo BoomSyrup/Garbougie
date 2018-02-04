@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../sdk/map.css"/>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <script src="../sdk/tomtom.min.js"></script>
+        <script
+          src="http://code.jquery.com/jquery-2.2.4.min.js"
+          integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+          crossorigin="anonymous"></script>
+        <style>
+            /* Sticky footer styles
+            -------------------------------------------------- */
+            html {
+              position: relative;
+              min-height: 100%;
+            }
+            body {
+              margin-bottom: 60px; /* Margin bottom by footer height */
+            }
+            .footer {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 60px; /* Set the fixed height of the footer here */
+              line-height: 60px; /* Vertically center the text there */
+              background-color: #f5f5f5;
+              z-index:100;
+            }
+
+
+            /* Custom page CSS
+            -------------------------------------------------- */
+            /* Not required for template or sticky footer method. */
+
+            .container {
+              width: auto;
+              max-width: 680px;
+              padding: 0 15px;
+            }
+        </style>
+    </head>
+    <body style="width: 100%; height: 100%; margin: 0; padding: 0;">
+        <div id="map" style="width: 100%; height: 100%; z-index:10;"></div>
+        <footer class="footer text-center">
+          <div class="container">
+            <span class="text-muted text-center" id="eta"></span>
+            <span class="text-muted text-center" id="buttons" style="display:none" >
+                <span id="pickup" >
+                    <button type="button" class="btn btn-light" id="pickedup">Picked up the trash</button>
+                    <button type="button" class="btn btn-light" id="notpickedup">Couldn't pick up the trash</button>
+                </span>
+                <span id="keepgoing" style="display:none">
+                    <button type="button" class="btn btn-light" id="continue">Continue route</button>
+                    <span style="display:none" id="nomore">There are no more routes today</span>
+                    <button type="button" class="btn btn-light" id="break">Take a break</button>
+                    <button type="button" class="btn btn-light" id="finish">Finish for today</button>
+                </span>
+            </span>
+          </div>
+        </footer>
+        <script>
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+            };
+
+            function getNextRoute(from) {
+                $.getJSON("../nodes.json", function(json) {
+                    for (i = 0; i < json.nodes.length; i++) {
+                        if (from == "reload") {
+                            if (prev > 0 && json.nodes[i].completed == 0) {
+                                userId = json.nodes[i].id;
+                                next = {lat: json.nodes[i].lat, lng: json.nodes[i].lng};
+                                break;
+                            } else if (json.nodes[i].id == userId) {
+                                prev = json.nodes[i].id;
+                            }
+                        } else if (from == "load") {
+                            if (json.nodes[i].id == userId) {
+                                next = {lat: json.nodes[i].lat, lng: json.nodes[i].lng};
+                                break;
+                            }
+                        }
+                    }
+                }).done(function() {
+                    redrawMap();
+                });
+            }
+
+            function redrawMap() {
+                if(navigator.geolocation) {
+                    navigator.geolocation.watchPosition( success, fail );
+                } else {
+                    alert("Sorry, your browser does not support geolocation services.");
+                }
+            };
+
+            function success(position)
+            {
+                if (call == 0 || !(position.coords.latitude == next.lat && position.coords.longitude == next.lng)) {
+                    routeOnMap.clear();
+                    routeOnMap.draw([{lat: position.coords.latitude, lng: position.coords.longitude}, next]);
+                }
+
+                if (position.coords.latitude == next.lat && position.coords.longitude == next.lng) {
+                    for (var i = 1; i < interval; i++)
+                        window.clearInterval(i);
+                    
+                    $("#eta").hide();
+                    $("#buttons").show();
+                } else {
+                    $("#eta").show();
+                    $("#buttons").hide();
+                }
+                call++;
+            };
+
+            function fail() {
+                // fail
+            };
+
+            tomtom.routingKey('KAZtgZxAjZAyOApEYJdAjHaEqsQQ7tJn');
+            tomtom.searchKey('KAZtgZxAjZAyOApEYJdAjHaEqsQQ7tJn');
+            tomtom.key("KAZtgZxAjZAyOApEYJdAjHaEqsQQ7tJn");
+            var map = tomtom.map("map", {source: "vector", basePath: "/backend/sdk"});
+            var userId = getUrlParameter('id');
+            var routeOnMap = tomtom.routeOnMap({
+                    serviceOptions: {
+                        maxAlternatives: 0,
+                        traffic: true
+                    }
+                })
+                .addTo(map);
+            routeOnMap.on(routeOnMap.Event.RouteChanged, function (eventObject) {
+                var myDate = new Date(eventObject.object.arrivalTime);
+                var result = myDate.getHours() + ":" + myDate.getMinutes();
+                $("#eta").text("You'll arrive at your destination at " + result);
+            });
+            map.zoomControl.setPosition('topright');
+            var call = 0;
+
+            getNextRoute("load");
+
+            var interval = setInterval(redrawMap, 10000);
+
+            $("#pickedup").click(function(){
+                $.getJSON("../nodes.json", function(json) {
+                    hasAnother = 0;
+                    for (i = 0; i < json.nodes.length; i++) {
+                        if (json.nodes.length == i + 1 && hasAnother == 0) {
+                            $("#continue").hide();
+                            $("#nomore").show();
+                        } else if (json.nodes.length != i + 1 && json.nodes[i].id == userId) {
+                            hasAnother = 1;
+                        }
+                    }
+                }).done(function() {
+                    
+                });
+
+                $("#pickup").hide();
+                $("#keepgoing").show();
+                $.ajax({ url: "http://f7c43a95.ngrok.io/delivered?id=" + getUrlParameter("id") + "&completed=" + "/1" });
+            });
+
+            $("#notpickedup").click(function(){
+                $("#pickup").hide();
+                $("#keepgoing").show();
+                $.ajax({ url: "http://f7c43a95.ngrok.io/delivered?id=" + getUrlParameter("id") + "&completed=" + "/2" });
+            });
+
+            $("#continue").click(function(){
+                userId = getUrlParameter('id');
+                prev = userId;
+
+                getNextRoute("reload");
+            });
+
+            $("#break").click(function(){
+
+            });
+
+            $("#finish").click(function(){
+                
+            });
+        </script>
+    </body>
+</html>
