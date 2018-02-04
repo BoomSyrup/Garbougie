@@ -26,6 +26,11 @@ function getAll(res, res){
 	res.send(data.nodes);
 }
 
+app.get('/remove', removeAll);
+function removeAll(res, res){
+	res.send(data.nodes);
+}
+
 //Route for the user to go and post from the app
 app.get('/pickup', requestPickup);
 function requestPickup(req, res){
@@ -37,8 +42,6 @@ function requestPickup(req, res){
 		lat: lat,
 		lng: lng
 	}
-
-	// console.log(JSON.stringify(nodeObj))
 
 	data.nodes.push(nodeObj);
 	var newData = JSON.stringify(data, null, 3);
