@@ -89,19 +89,19 @@
             };
 
             function getNextRoute(from) {
-                $.getJSON("../nodes.json", function(json) {
-                    for (i = 0; i < json.nodes.length; i++) {
+                $.getJSON("http://f7c43a95.ngrok.io/all", function(json) {
+                    for (i = 0; i < json.length; i++) {
                         if (from == "reload") {
-                            if (prev > 0 && json.nodes[i].completed == 0) {
-                                userId = json.nodes[i].id;
-                                next = {lat: json.nodes[i].lat, lng: json.nodes[i].lng};
+                            if (prev > 0 && json[i].completed == 0) {
+                                userId = json[i].id;
+                                next = {lat: json[i].lat, lng: json[i].lng};
                                 break;
-                            } else if (json.nodes[i].id == userId) {
-                                prev = json.nodes[i].id;
+                            } else if (json[i].id == userId) {
+                                prev = json[i].id;
                             }
                         } else if (from == "load") {
-                            if (json.nodes[i].id == userId) {
-                                next = {lat: json.nodes[i].lat, lng: json.nodes[i].lng};
+                            if (json[i].id == userId) {
+                                next = {lat: json[i].lat, lng: json[i].lng};
                                 break;
                             }
                         }
@@ -144,9 +144,9 @@
                 // fail
             };
 
-            tomtom.routingKey('KAZtgZxAjZAyOApEYJdAjHaEqsQQ7tJn');
-            tomtom.searchKey('KAZtgZxAjZAyOApEYJdAjHaEqsQQ7tJn');
-            tomtom.key("KAZtgZxAjZAyOApEYJdAjHaEqsQQ7tJn");
+            tomtom.routingKey('iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF');
+            tomtom.searchKey('iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF');
+            tomtom.key("iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF");
             var map = tomtom.map("map", {source: "vector", basePath: "/backend/sdk"});
             var userId = getUrlParameter('id');
             var routeOnMap = tomtom.routeOnMap({
@@ -170,13 +170,13 @@
             var interval = setInterval(redrawMap, 5000);
 
             $("#pickedup").click(function(){
-                $.getJSON("../nodes.json", function(json) {
+                $.getJSON("http://f7c43a95.ngrok.io/all", function(json) {
                     hasAnother = 0;
-                    for (i = 0; i < json.nodes.length; i++) {
-                        if (json.nodes.length == i + 1 && hasAnother == 0) {
+                    for (i = 0; i < json.length; i++) {
+                        if (json.length == i + 1 && hasAnother == 0) {
                             $("#continue").hide();
                             $("#nomore").show();
-                        } else if (json.nodes.length != i + 1 && json.nodes[i].id == userId) {
+                        } else if (json.length != i + 1 && json[i].id == userId) {
                             hasAnother = 1;
                         }
                     }
