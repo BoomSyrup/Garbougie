@@ -1,0 +1,7144 @@
+{
+  "glyphs": "{hosted_style_url}/glyphs/tt/{fontstack}/{range}.pbf",
+  "id": "night",
+  "layers": [
+    {
+      "id": "River label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "River label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Service road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Service road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Pedestrian road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Pedestrian road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Minor local road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Minor local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Local road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Major local road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Connecting road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Connecting road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Secondary road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Secondary road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Major road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "International road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "International road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Motorway icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Motorway",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Minor local road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Minor local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Local road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Major local road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Connecting road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Connecting road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Secondary road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Secondary road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Major road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "International road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "International road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Motorway tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Motorway tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll minor local road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll minor local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll local road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll major local road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll connecting road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll connecting road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll secondary road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll secondary road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll major road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll international road icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll international road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll motorway icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll motorway",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll minor local road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll minor local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll local road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll major local road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll connecting road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll connecting road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll secondary road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll secondary road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll major road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll international road tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll international road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        92
+      ],
+      "id": "Toll motorway tunnel icon1",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll motorway tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Service road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Service road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Pedestrian road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Pedestrian road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Minor local road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Minor local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Local road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Major local road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Connecting road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Connecting road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Secondary road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Secondary road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Major road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "International road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "International road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Motorway icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Motorway",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Minor local road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Minor local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Local road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Major local road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Connecting road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Connecting road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Secondary road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Secondary road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Major road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "International road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "International road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Motorway tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Motorway tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll minor local road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll minor local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll local road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll major local road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major local road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll connecting road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll connecting road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll secondary road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll secondary road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll major road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll international road icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll international road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll motorway icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll motorway",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll minor local road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll minor local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll local road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll major local road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll connecting road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll connecting road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll secondary road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll secondary road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll major road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll international road tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll international road tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        ">",
+        "icon",
+        92
+      ],
+      "id": "Toll motorway tunnel icon2",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{icon_text}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              20,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 0
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll motorway tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Non public road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Non public road",
+      "type": "symbol"
+    },
+    {
+      "id": "Walkway road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Walkway road",
+      "type": "symbol"
+    },
+    {
+      "id": "Parking road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Parking road",
+      "type": "symbol"
+    },
+    {
+      "id": "Service road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Service road",
+      "type": "symbol"
+    },
+    {
+      "id": "Pedestrian road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "minzoom": 16,
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Pedestrian road",
+      "type": "symbol"
+    },
+    {
+      "id": "Minor local road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Minor local road",
+      "type": "symbol"
+    },
+    {
+      "id": "Ferry road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              14,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#A0A0A0",
+        "text-halo-color": "rgba(16, 16, 16, 0.75)",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Ferry road",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        145
+      ],
+      "id": "Ferry terminal POI",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": false,
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          2
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              13,
+              12
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              15,
+              14
+            ],
+            [
+              16,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#FFFFFF",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Ferry terminal",
+      "type": "symbol"
+    },
+    {
+      "id": "Local road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Local road",
+      "type": "symbol"
+    },
+    {
+      "id": "Major local road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              17,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major local road",
+      "type": "symbol"
+    },
+    {
+      "id": "Connecting road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              15,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Connecting road",
+      "type": "symbol"
+    },
+    {
+      "id": "Secondary road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              15,
+              14
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Secondary road",
+      "type": "symbol"
+    },
+    {
+      "id": "Major road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major road",
+      "type": "symbol"
+    },
+    {
+      "id": "International road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "International road",
+      "type": "symbol"
+    },
+    {
+      "id": "Motorway label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Motorway",
+      "type": "symbol"
+    },
+    {
+      "id": "Minor local road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Minor local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Local road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Major local road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              17,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Connecting road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              15,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Connecting road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Secondary road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              15,
+              14
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Secondary road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Major road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Major road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "International road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "International road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Motorway tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Motorway tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll minor local road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll minor local road",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll local road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll local road",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll major local road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              17,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major local road",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll connecting road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              15,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll connecting road",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll secondary road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              15,
+              14
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll secondary road",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll major road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major road",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll international road label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll international road",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll motorway label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll motorway",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll minor local road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll minor local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll local road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              12
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll major local road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              17,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major local road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll connecting road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              15,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll connecting road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll secondary road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              15,
+              14
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll secondary road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll major road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll major road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll international road tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll international road tunnel",
+      "type": "symbol"
+    },
+    {
+      "id": "Toll motorway tunnel label",
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-keep-upright": true,
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-rotation-alignment": "map",
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#191919",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "Toll motorway tunnel",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "National park name",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              17,
+              18
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#797979",
+        "text-halo-color": "#121212",
+        "text-halo-width": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              16,
+              1.5
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        }
+      },
+      "source": "vectorTiles",
+      "source-layer": "National park name",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        147
+      ],
+      "id": "Railway station",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": false,
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          2
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              13,
+              12
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              15,
+              14
+            ],
+            [
+              16,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#FFFFFF",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Railway station",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "<=",
+        "icon",
+        141
+      ],
+      "id": "Airport POI",
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-image": "{icon}",
+        "icon-padding": 5,
+        "symbol-avoid-edges": false
+      },
+      "source": "vectorTiles",
+      "source-layer": "Airport POI",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Airport label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              10,
+              11
+            ],
+            [
+              13,
+              14
+            ],
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              19
+            ],
+            [
+              16,
+              21
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Airport label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Ocean label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              3,
+              13
+            ],
+            [
+              4,
+              17
+            ],
+            [
+              5,
+              20
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 2
+      },
+      "source": "vectorTiles",
+      "source-layer": "Ocean label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Sea label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              3,
+              13
+            ],
+            [
+              4,
+              17
+            ],
+            [
+              5,
+              20
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 2
+      },
+      "source": "vectorTiles",
+      "source-layer": "Sea label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Woodland label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              10,
+              13
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              15,
+              14
+            ],
+            [
+              16,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Woodland label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Park/Garden label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              13,
+              12
+            ],
+            [
+              16,
+              16
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Park/Garden label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Industrial area label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              13,
+              11
+            ],
+            [
+              15,
+              16
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Industrial area label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Hospital label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              13,
+              11
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              16,
+              18
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Hospital label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "University/School label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              11
+            ],
+            [
+              15,
+              13
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              17,
+              18
+            ],
+            [
+              20,
+              22
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "University/School label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Other water body label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              10,
+              13
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              15,
+              14
+            ],
+            [
+              16,
+              15
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Other water body label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Lake label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              14
+            ],
+            [
+              12,
+              15
+            ],
+            [
+              15,
+              17
+            ],
+            [
+              16,
+              19
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Lake label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Island label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              11
+            ],
+            [
+              10,
+              13
+            ],
+            [
+              12,
+              15
+            ],
+            [
+              15,
+              17
+            ],
+            [
+              16,
+              19
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Island label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Shopping centre label",
+      "layout": {
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              13,
+              11
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              16,
+              18
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Shopping centre label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Zoo label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              13,
+              11
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              16,
+              18
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Zoo label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Stadium label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              13
+            ],
+            [
+              16,
+              19
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Stadium label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Cemetery label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              13
+            ],
+            [
+              16,
+              19
+            ],
+            [
+              20,
+              24
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Cemetery label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Golf Course label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              13
+            ],
+            [
+              16,
+              19
+            ],
+            [
+              20,
+              24
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Golf Course label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Amusement area label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              13
+            ],
+            [
+              16,
+              19
+            ],
+            [
+              20,
+              24
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Amusement area label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Reservation label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-max-width": 20,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              10,
+              18
+            ]
+          ]
+        }
+      },
+      "maxzoom": 12,
+      "minzoom": 8,
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1,
+        "text-opacity": 0.4
+      },
+      "source": "vectorTiles",
+      "source-layer": "Reservation label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Intermittent water label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Intermittent water label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Prison label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              12
+            ],
+            [
+              16,
+              14
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Prison label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Museum label",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              12,
+              9
+            ],
+            [
+              17,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(148, 139, 128, 1)",
+        "text-halo-color": "rgba(26, 26, 26, 1)",
+        "text-halo-width": 2
+      },
+      "source": "vectorTiles",
+      "source-layer": "Museum label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Military Territory label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              18
+            ],
+            [
+              16,
+              21
+            ],
+            [
+              18,
+              24
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Military Territory label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Other label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              12
+            ],
+            [
+              16,
+              14
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Other label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Landmark label",
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              12
+            ],
+            [
+              16,
+              14
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#dadada",
+        "text-halo-color": "#1a1a1a",
+        "text-halo-width": 0.5
+      },
+      "source": "vectorTiles",
+      "source-layer": "Landmark label",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Village",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-padding": 10,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              5
+            ],
+            [
+              7,
+              11
+            ],
+            [
+              9,
+              12
+            ],
+            [
+              10,
+              13
+            ],
+            [
+              11,
+              15
+            ],
+            [
+              12,
+              17
+            ],
+            [
+              13,
+              19
+            ],
+            [
+              15,
+              21
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#cccccc",
+        "text-halo-color": "#141414",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Village",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Town",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-padding": 10,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              6
+            ],
+            [
+              7,
+              11
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              9,
+              13
+            ],
+            [
+              10,
+              14
+            ],
+            [
+              11,
+              16
+            ],
+            [
+              12,
+              18
+            ],
+            [
+              13,
+              20
+            ],
+            [
+              15,
+              22
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#cccccc",
+        "text-halo-color": "#141414",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Town",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Small city",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-padding": 10,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              6
+            ],
+            [
+              7,
+              11
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              9,
+              13
+            ],
+            [
+              10,
+              15
+            ],
+            [
+              11,
+              17
+            ],
+            [
+              12,
+              19
+            ],
+            [
+              15,
+              21
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#cccccc",
+        "text-halo-color": "#141414",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Small city",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Medium city",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-padding": 10,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              7
+            ],
+            [
+              5,
+              11
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              8,
+              13
+            ],
+            [
+              9,
+              15
+            ],
+            [
+              10,
+              17
+            ],
+            [
+              11,
+              19
+            ],
+            [
+              12,
+              21
+            ],
+            [
+              15,
+              23
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#cccccc",
+        "text-halo-color": "#141414",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Medium city",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Large city",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-padding": 10,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              5,
+              12
+            ],
+            [
+              7,
+              14
+            ],
+            [
+              8,
+              16
+            ],
+            [
+              9,
+              18
+            ],
+            [
+              10,
+              19
+            ],
+            [
+              11,
+              21
+            ],
+            [
+              12,
+              23
+            ],
+            [
+              15,
+              25
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#cccccc",
+        "text-halo-color": "#141414",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Large city",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Capital city",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-padding": 10,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              8
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              9,
+              20
+            ],
+            [
+              10,
+              21
+            ],
+            [
+              11,
+              23
+            ],
+            [
+              12,
+              25
+            ],
+            [
+              15,
+              27
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#cccccc",
+        "text-halo-color": "#141414",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Capital city",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "State name short",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-padding": 10,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              10
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              5,
+              12
+            ],
+            [
+              7,
+              14
+            ],
+            [
+              8,
+              16
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#b1b1b1",
+        "text-halo-color": "#141414",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "State name short",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "State name",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-padding": 10,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              10
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              5,
+              12
+            ],
+            [
+              7,
+              14
+            ],
+            [
+              8,
+              16
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#b1b1b1",
+        "text-halo-color": "#141414",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "State name",
+      "type": "symbol"
+    },
+    {
+      "filter": [
+        "!=",
+        "name",
+        " "
+      ],
+      "id": "Country name",
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{name}",
+        "text-font": [
+          "FrutigerHelveticaMYingHei-Regular"
+        ],
+        "text-letter-spacing": 0.1,
+        "text-offset": [
+          0,
+          0.1
+        ],
+        "text-padding": 10,
+        "text-size": {
+          "stops": [
+            [
+              0,
+              10
+            ],
+            [
+              4,
+              12
+            ],
+            [
+              5,
+              13
+            ],
+            [
+              6,
+              15
+            ],
+            [
+              7,
+              18
+            ],
+            [
+              8,
+              22
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#d0d0d0",
+        "text-halo-color": "#141414",
+        "text-halo-width": 1
+      },
+      "source": "vectorTiles",
+      "source-layer": "Country name",
+      "type": "symbol"
+    }
+  ],
+  "metadata": {},
+  "sources": {
+    "vectorTiles": {
+      "maxzoom": 18,
+      "minzoom": 0,
+      "tiles": [
+        "https://a.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key={key}",
+        "https://b.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key={key}",
+        "https://c.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key={key}",
+        "https://d.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key={key}"
+      ],
+      "type": "vector"
+    }
+  },
+  "sprite": "{hosted_style_url}/sprite/tt/sprite",
+  "version": 8
+}

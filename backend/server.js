@@ -11,12 +11,23 @@ var app = express();
 var server = app.listen(process.env.PORT || 8080, () => console.log('Server is running!'));
 var tt_key = process.env.TT_KEY;
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 app.use(express.static('public'));
 // app.use(bodyParser.json({ type: 'application/*+json' }))
 
 //Get all
 app.get('/all', getAll);
 function getAll(res, res){
+	res.send(data.nodes);
+}
+
+app.get('/remove', removeAll);
+function removeAll(res, res){
 	res.send(data.nodes);
 }
 
@@ -32,8 +43,6 @@ function requestPickup(req, res){
 		lng: lng
 	}
 
-	// console.log(JSON.stringify(nodeObj))
-
 	data.nodes.push(nodeObj);
 	var newData = JSON.stringify(data, null, 3);
 	fs.writeFile('nodes.json', newData, function(err){
@@ -43,44 +52,4 @@ function requestPickup(req, res){
 
 	res.status(200);
 	res.send(data.nodes);
-}
-
-app.get('/test', testAPI);
-function testAPI(req, res){
-	//https://<baseURL>/routing/<versionNumber>/matrix[/<outputFormat>]?key=<APIKEY>[&routingOption1=<routingValue1>&routingOption2=<routingValue2>...]
-	//https://api.tomtom.com/routing/1/matrix/xml?key=<APIKEY>&routeType=shortest&travelMode=truck
-	const options = {
-	method: 'POST',
-		uri: 'https://api.tomtom.com/routing/1/matrix/json?key=iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF&routeType=shortest&travelMode=truck',
-		body: {
-	      "origins": [
-	        {
-	            "point": {"latitude": 52.36006,"longitude": 4.85106}
-	        },
-	        {
-	            "point": {"latitude": 52.36187,"longitude": 4.85056}
-	        }
-	    	],
-
-		    "destinations": [
-		        {
-		            "point": {"latitude": 52.36006,"longitude": 4.85106}
-		        },
-		        {
-		            "point": {"latitude": 52.36187,"longitude": 4.85056}
-		        }
-		 		]
-		 },
-		json: true
-	}
-
-	request(options)
-	.then(function (response) {
-			console.log('meow');
-			res.send(response);
-	})
-	.catch(function (err) {
-			console.log('woof');
-			res.send(err)
-	})
 }
