@@ -97,101 +97,100 @@ function calculateRoute(input){
   };
 
   //gets data from the Tom Tom API
-  $.ajax({
-    'headers': {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-    },
-    'type': "POST",
-    'url': url,
-    'data': JSON.stringify(data),
-    'dataType': 'json'
-  }).done(function(data) {
-    console.log(data);
-    //parse data
-    for(row in data.matrix)
-    {
-      var point;
-      var times = {};
-      for(column in data.matrix)
+    $.ajax({
+      'headers': {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+      },
+      'type': "POST",
+      'url': url,
+      'data': JSON.stringify(data),
+      'dataType': 'json'
+    }).done(function(data) {
+      //parse data
+      for(row in data.matrix)
       {
-        var id = input[column].id
-        if(column != row)
+        var point;
+        var times = {};
+        for(column in data.matrix)
         {
-          times[id] = (data.matrix[row][column].response.routeSummary.travelTimeInSeconds + data.matrix[row][column].response.routeSummary.trafficDelayInSeconds);
-        }
-        else {
-          point = id;
-        }
-      }
-      dataArr.push(
-        JSON.stringify({
-        id : point,
-        times : times
-      }));
-    }
-  }).done(function()
-    {
-      for(obj in dataArr)
-      {
-        dataArr[obj] = JSON.parse(dataArr[obj]);
-      }
-      var start = 0, //whenever given input, the first point is the starting location of the truck
-          next = 0,
-          min = Number.MAX_VALUE;
-      for(element in dataArr)
-      {
-        for(key in element)
-        if (dataArr[element].hasOwnProperty(key))
-        {
-          if(key == dataArr[start].id)
+          var id = input[column].id
+          if(column != row)
           {
-            delete dataArr[element].key;//delete all values of next point so that it won't be added to route multiple times
+            times[id] = (data.matrix[row][column].response.routeSummary.travelTimeInSeconds + data.matrix[row][column].response.routeSummary.trafficDelayInSeconds);
+          }
+          else {
+            point = id;
           }
         }
+        dataArr.push(
+          JSON.stringify({
+          id : point,
+          times : times
+        }));
       }
-      while(dataArr.length > 0)
+    }).done(function()
       {
-        //find closest stop
-          for(time in dataArr[start].times)
+        for(obj in dataArr)
+        {
+          dataArr[obj] = JSON.parse(dataArr[obj]);
+        }
+        var start = 0, //whenever given input, the first point is the starting location of the truck
+            next = 0,
+            min = Number.MAX_VALUE;
+        for(element in dataArr)
+        {
+          for(key in element)
+          if (dataArr[element].hasOwnProperty(key))
           {
-            if(dataArr[start]["times"][time] < min )
+            if(key == dataArr[start].id)
             {
-              min = dataArr[start]["times"].time;
-              next = time;
+              delete dataArr[element].key;//delete the first point because we don't want any location to come back to start point
             }
           }
-          route.push(dataArr[start].id);
-          dataArr.splice(start, 1); //delete old starting point from available points
-          for(el in dataArr)
-          {
-            if(dataArr[el]['id'] == next)
-              next = el;
-          }
-          start = next;
-          for(element in dataArr)
-          {
-            for(key in element)
-            if (dataArr[element].hasOwnProperty(key))
+        }
+        while(dataArr.length > 0)
+        {
+          //find closest stop
+            for(time in dataArr[start].times)
             {
-              if(key == next)
+              if(dataArr[start]["times"][time] < min )
               {
-                delete dataArr[element].key;//delete all values of next point so that it won't be added to route multiple times
+                min = dataArr[start]["times"].time;
+                next = time;
+              }
+            }
+            route.push(dataArr[start].id);
+            dataArr.splice(start, 1); //delete old starting point from available points
+            for(el in dataArr)
+            {
+              if(dataArr[el]['id'] == next)
+                next = el;
+            }
+            start = next;
+            for(element in dataArr)
+            {
+              for(key in element)
+              if (dataArr[element].hasOwnProperty(key))
+              {
+                if(key == next)
+                {
+                  delete dataArr[element].key;//delete all values of next point so that it won't be added to route multiple times
+                }
               }
             }
           }
-        }
-        var routeObject = [];
-        for(obj in input)
-        {
+          var routeObjects = [];
           for(id in route)
           {
-            if(id == input[obj].id)
+            for(node in input)
             {
-              routeObject.push(input[obj]);
+              if(route[id].localeCompare(input[node].id) == 0)
+              {
+                routeObjects.push(input[node]);
+              }
             }
           }
-        }
-        console.log(routeObject);
-    });
-}
+          return routeObjects;
+      });
+    }

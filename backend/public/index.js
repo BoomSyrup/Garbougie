@@ -45,7 +45,6 @@ var data = {
     'data': JSON.stringify(data),
     'dataType': 'json'
   }).done(function(data) {
-    console.log(data);
     //parse data
     for(row in data.matrix)
     {
@@ -84,7 +83,7 @@ var data = {
         {
           if(key == dataArr[start].id)
           {
-            delete dataArr[element].key;//delete all values of next point so that it won't be added to route multiple times
+            delete dataArr[element].key;//delete the first point because we don't want any location to come back to start point
           }
         }
       }
@@ -119,21 +118,15 @@ var data = {
             }
           }
         }
-        console.log("route " + route)
         var routeObjects = [];
         for(id in route)
         {
           for(node in input)
           {
-            if(route[id] == input[node].id)
+            if(route[id].localeCompare(input[node].id) == 0)
             {
-              console.log(route[id] + " == " + input[obj].id);
-              routeObjects.push(input[obj]);
+              routeObjects.push(input[node]);
             }
           }
-        }
-        for(obj in routeObjects)
-        {
-          console.log(routeObjects[obj]);
         }
     });
