@@ -2,8 +2,18 @@
    "nodes": [
       {
          "id": 1,
-         "latitude": 0,
-         "longitude": 0
+         "lat": 0,
+         "long": 0
+      },
+      {
+         "id": 2,
+         "lat": "1",
+         "lng": "1"
+      },
+      {
+         "id": 3,
+         "lat": "1",
+         "lng": "1"
       }
    ]
 }
