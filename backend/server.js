@@ -81,6 +81,6 @@ function testAPI(req, res){
 	})
 	.catch(function (err) {
 			console.log('woof');
-			res.redirect(303, '/test');
+			res.send(err)
 	})
 }
