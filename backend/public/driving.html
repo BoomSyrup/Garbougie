@@ -3,6 +3,7 @@
         <link rel="stylesheet" type="text/css" href="../sdk/map.css"/>
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
         <script src="../sdk/tomtom.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script
           src="http://code.jquery.com/jquery-2.2.4.min.js"
           integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -22,11 +23,18 @@
               bottom: 0;
               width: 100%;
               height: 60px; /* Set the fixed height of the footer here */
-              line-height: 60px; /* Vertically center the text there */
+              /*line-height: 60px; /* Vertically center the text there */
               background-color: #f5f5f5;
               z-index:100;
             }
 
+            .footer-double {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              background-color: #f5f5f5;
+              z-index:100;
+            }
 
             /* Custom page CSS
             -------------------------------------------------- */
@@ -35,25 +43,31 @@
             .container {
               width: auto;
               max-width: 680px;
-              padding: 0 15px;
+              padding: 15px;
+            }
+
+            .container-double {
+              width: auto;
+              max-width: 680px;
+              padding: 48px 15px;
             }
         </style>
     </head>
     <body style="width: 100%; height: 100%; margin: 0; padding: 0;">
         <div id="map" style="width: 100%; height: 100%; z-index:10;"></div>
-        <footer class="footer text-center">
-          <div class="container">
+        <footer class="footer text-center" id="footer">
+          <div id="container" class="container">
             <span class="text-muted text-center" id="eta"></span>
             <span class="text-muted text-center" id="buttons" style="display:none" >
                 <span id="pickup" >
-                    <button type="button" class="btn btn-light" id="pickedup">Picked up the trash</button>
-                    <button type="button" class="btn btn-light" id="notpickedup">Couldn't pick up the trash</button>
+                    <button type="button" class="btn btn-success btn-lg btn-block" id="pickedup">Picked up the trash</button>
+                    <button type="button" class="btn btn-danger btn-lg btn-block" id="notpickedup">Couldn't pick up the trash</button>
                 </span>
                 <span id="keepgoing" style="display:none">
-                    <button type="button" class="btn btn-light" id="continue">Continue route</button>
                     <span style="display:none" id="nomore">There are no more routes today</span>
-                    <button type="button" class="btn btn-light" id="break">Take a break</button>
-                    <button type="button" class="btn btn-light" id="finish">Finish for today</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="continue">Continue route</button>
+                    <button type="button" class="btn btn-info btn-lg btn-block" id="break">Take a break</button>
+                    <button type="button" class="btn btn-info btn-lg btn-block" id="finish">Finish for today</button>
                 </span>
             </span>
           </div>
@@ -107,20 +121,21 @@
 
             function success(position)
             {
-                if (call == 0 || !(position.coords.latitude == next.lat && position.coords.longitude == next.lng)) {
+                if (call == 0 || anotherCall == 0 || !(position.coords.latitude == next.lat && position.coords.longitude == next.lng)) {
                     routeOnMap.clear();
                     routeOnMap.draw([{lat: position.coords.latitude, lng: position.coords.longitude}, next]);
                 }
 
                 if (position.coords.latitude == next.lat && position.coords.longitude == next.lng) {
-                    for (var i = 1; i < interval; i++)
-                        window.clearInterval(i);
-                    
+                    $("#footer").removeClass("footer").addClass("footer-double");
                     $("#eta").hide();
                     $("#buttons").show();
+                    anotherCall++;
                 } else {
+                    $("#footer").removeClass("footer-double").addClass("footer");
                     $("#eta").show();
                     $("#buttons").hide();
+                    anotherCall = 0;
                 }
                 call++;
             };
@@ -143,15 +158,16 @@
                 .addTo(map);
             routeOnMap.on(routeOnMap.Event.RouteChanged, function (eventObject) {
                 var myDate = new Date(eventObject.object.arrivalTime);
-                var result = myDate.getHours() + ":" + myDate.getMinutes();
+                var result = myDate.getHours() + ":" + (myDate.getMinutes()<10?'0':'') + myDate.getMinutes();
                 $("#eta").text("You'll arrive at your destination at " + result);
             });
             map.zoomControl.setPosition('topright');
             var call = 0;
+            var anotherCall = 0;
 
             getNextRoute("load");
 
-            var interval = setInterval(redrawMap, 10000);
+            var interval = setInterval(redrawMap, 5000);
 
             $("#pickedup").click(function(){
                 $.getJSON("../nodes.json", function(json) {
@@ -164,8 +180,6 @@
                             hasAnother = 1;
                         }
                     }
-                }).done(function() {
-                    
                 });
 
                 $("#pickup").hide();
