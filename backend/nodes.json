@@ -8,15 +8,57 @@
       },
       {
          "id": 2,
-         "lat": 37.358383, 
+         "lat": 37.358383,
          "lng": -122.063787,
          "completed": 0
       },
       {
          "id": 3,
-         "lat": 37.489433, 
+         "lat": 37.489433,
          "lng": -122.2427396,
          "completed": 0
+      },
+      {
+         "id": 4,
+         "lat": -121,
+         "lng": 37,
+         "pickedup": 0
+      },
+      {
+         "id": 5,
+         "lat": -121,
+         "lng": 37,
+         "pickedup": 0
+      },
+      {
+         "id": 6,
+         "lat": -121,
+         "lng": 37,
+         "pickedup": 0
+      },
+      {
+         "id": 7,
+         "lat": null,
+         "lng": -120,
+         "pickedup": 0
+      },
+      {
+         "id": 8,
+         "lat": null,
+         "lng": 37,
+         "pickedup": 0
+      },
+      {
+         "id": 9,
+         "lat": 1,
+         "lng": 1,
+         "pickedup": 0
+      },
+      {
+         "id": 10,
+         "lat": 1,
+         "lng": 1,
+         "pickedup": 0
       }
    ]
 }

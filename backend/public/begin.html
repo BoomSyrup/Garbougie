@@ -51,9 +51,9 @@
           </div>
         </footer>
         <script>
-            tomtom.routingKey('KAZtgZxAjZAyOApEYJdAjHaEqsQQ7tJn');
-            tomtom.searchKey('KAZtgZxAjZAyOApEYJdAjHaEqsQQ7tJn');
-            tomtom.key("KAZtgZxAjZAyOApEYJdAjHaEqsQQ7tJn");
+            tomtom.routingKey('iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF');
+            tomtom.searchKey('iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF');
+            tomtom.key("iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF");
             var map = tomtom.map("map", {source: "vector", basePath: "/backend/sdk"});
             map.zoomControl.setPosition('topright');
 
@@ -70,13 +70,13 @@
                 allDestinations = [{lat: position.coords.latitude, lng: position.coords.longitude}];
                 next = 0;
                 counter = 0;
-                $.getJSON("../nodes.json", function(json) {
-                    for (i = 0; i < json.nodes.length; i++) {
-                        if (json.nodes[i].completed == 0) {
+                $.getJSON("http://f7c43a95.ngrok.io/all", function(json) {
+                    for (i = 0; i < json.length; i++) {
+                        if (json[i].completed == 0) {
                             if (counter == 0) {
-                                next = json.nodes[i].id;
+                                next = json[i].id;
                             }
-                            allDestinations.push({lat: json.nodes[i].lat, lng: json.nodes[i].lng});
+                            allDestinations.push({lat: json[i].lat, lng: json[i].lng});
                             counter++;
                         }
                     }
