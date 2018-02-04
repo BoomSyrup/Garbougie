@@ -22,12 +22,19 @@ app.use('/static', express.static('sdk'));
 
 //Get all
 app.get('/all', getAll);
-function getAll(res, res){
+function getAll(req, res){
 	res.send(data.nodes);
 }
 
+app.get('/node', getOne);
+function getOne(req, res){
+  var id = req.query.id;
+  const uno = data.nodes.filter(node => node.id == id);
+  res.send(uno);
+}
+
 app.get('/remove', removeAll);
-function removeAll(res, res){
+function removeAll(req, res){
 	res.send(data.nodes);
 }
 
@@ -56,13 +63,20 @@ function requestPickup(req, res){
 }
 
 //Change the status on a particular node that it has been delivered
-app.get('/delivered/:id/:pickedup', deliverPackage);
+app.get('/delivered', deliverPackage);
 function deliverPackage(req, res){
-  var id = req.params.id;
-  var pickedup = req.params.pickedup;
-  var node = nodes.results.find(node => node.id === id);
+  var id = req.query.id;
+  var c = req.query.completed;
 
-  if (node) {
-    node.pickedup = pickedup;
+  const result = data.nodes.filter(node => node.id == id);
+
+  console.log(result)
+
+  if (result) {
+    result.completed = c;
+    res.status(200);
+    res.send(result);
+  } else {
+    res.status(400);
   }
 }
