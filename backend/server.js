@@ -70,10 +70,10 @@ function deliverPackage(req, res){
 
   const result = data.nodes.filter(node => node.id == id);
 
-  console.log(result)
-
   if (result) {
-    result.completed = c;
+    console.log(result);
+    result[0].completed = c;
+    console.log(result);
     res.status(200);
     res.send(result);
   } else {
