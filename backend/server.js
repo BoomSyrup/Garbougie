@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var request = require('request-promise')
+var request = require('request-promise');
+var request = require('ajax-request');
+
 
 var fs = require('fs');
 
@@ -130,7 +132,7 @@ function calculateRoute(input){
   };
 
   //gets data from the Tom Tom API
-    $.ajax({
+    request({
       'headers': {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
