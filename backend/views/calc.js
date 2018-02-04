@@ -78,8 +78,10 @@ $.getJSON("http://f7c43a95.ngrok.io/all", function(json) {
       while(dataArr.length > 0)
       {
         //find closest stop
-          for(time in dataArr[start].times)
+          console.log(dataArr[start]);
+          for(time in dataArr[start]["times"])
           {
+            console.log(time);
             if(dataArr[start]["times"][time] < min )
             {
               min = dataArr[start]["times"].time;

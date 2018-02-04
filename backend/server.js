@@ -70,8 +70,8 @@ function removeAll(req, res){
 app.get('/pickup', requestPickup);
 function requestPickup(req, res){
 	var id = data.nodes.length + 1;
-	var lat =  parseInt(req.query.lat);
-	var lng =  parseInt(req.query.lng);
+	var lat =  parseFloat(req.query.lat);
+	var lng =  parseFloat(req.query.lng);
 	var nodeObj = {
       id: id,
 		  lat: lat,
@@ -79,19 +79,12 @@ function requestPickup(req, res){
       completed: 0
   }
 
-	data.nodes.push(nodeObj);
+	data.nodes.unshift(nodeObj);
 	var newData = JSON.stringify(data, null, 3);
 	fs.writeFile('nodes.json', newData, function(err){
 		if (err) throw err;
 		return;
 	});
-
-  // var sortedData = calculateRoute(data.nodes);
-  // var newData = JSON.stringify(sortedData, null, 3);
-  // fs.writeFile('nodes.json', sortedData, function(err){
-  //   if (err) throw err;
-  //   return;
-  // });
 
 	res.status(200);
 	res.send(nodeObj);
