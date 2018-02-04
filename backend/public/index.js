@@ -1,5 +1,3 @@
-const http = require('http');
-
 function PriorityQueue () {
   this._nodes = [];
 
@@ -106,18 +104,52 @@ var input =
     }
 ];
 
-const postData = JSON.stringify(input);
+var places = [];
 
+for (var obj in input)
+{
+  places.push({
+    "point": {"latitude": input[obj].latitude, "longitude": input[obj].longitude}
+  });
+}
 
+var url = "https://api.tomtom.com/routing/1/matrix/json?key=iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF&routeType=shortest&travelMode=truck";
 
+var data = {
+  "origins":[
+  {
+      "point": {"latitude": 52.36006,"longitude": 4.85106}
+  },
+  {
+      "point": {"latitude": 52.36187,"longitude": 4.85056}
+  }
+],  "destinations": [
+    {
+        "point": {"latitude": 52.36006,"longitude": 4.85106}
+    },
+    {
+        "point": {"latitude": 52.36187,"longitude": 4.85056}
+    }
+  ]
+};
 
+function success(response)
+{
+  console.log(response)
+}
 
-
-
-
-
-
-
+  $.ajax({
+    'headers': {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    },
+    'type': "POST",
+    'url': url,
+    'data': JSON.stringify(data),
+    'dataType': 'json'
+  }).done(function(data) {
+    console.log(data);
+  });
 
 
 g.addVertex('A', {B: 7, C: 8});
@@ -130,4 +162,4 @@ g.addVertex('G', {C: 4, F: 9});
 g.addVertex('H', {E: 1, F: 3});
 
 // Log test, with the addition of reversing the path and prepending the first node so it's more readable
-console.log(g.shortestPath('A', 'H').concat(['A']).reverse());
+g.shortestPath('A', 'H').concat(['A']).reverse();
