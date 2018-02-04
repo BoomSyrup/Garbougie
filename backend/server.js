@@ -18,7 +18,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static('public'));
-// app.use(bodyParser.json({ type: 'application/*+json' }))
+app.use('/static', express.static('sdk'));
 
 //Get all
 app.get('/all', getAll);
@@ -35,13 +35,14 @@ function removeAll(res, res){
 app.get('/pickup', requestPickup);
 function requestPickup(req, res){
 	var id = data.nodes.length + 1;
-	var lat = req.query.lat;
-	var lng = req.query.lng;
+	var lat =  parseInt(req.query.lat);
+	var lng =  parseInt(req.query.lng);
 	var nodeObj = {
-		id: id,
-		lat: lat,
-		lng: lng
-	}
+      id: id,
+		  lat: lat,
+		  lng: lng,
+      pickedup: 0
+  }
 
 	data.nodes.push(nodeObj);
 	var newData = JSON.stringify(data, null, 3);
@@ -52,4 +53,16 @@ function requestPickup(req, res){
 
 	res.status(200);
 	res.send(data.nodes);
+}
+
+//Change the status on a particular node that it has been delivered
+app.get('/delivered/:id/:pickedup', deliverPackage);
+function deliverPackage(req, res){
+  var id = req.params.id;
+  var pickedup = req.params.pickedup;
+  var node = nodes.results.find(node => node.id === id);
+
+  if (node) {
+    node.pickedup = pickedup;
+  }
 }
