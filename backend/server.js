@@ -5,6 +5,9 @@ var request = require('request-promise')
 var fs = require('fs');
 var jsonData = fs.readFileSync('nodes.json');
 
+const $ = require('jquery');
+const ajax = require('jquery-ajax');
+
 var data = JSON.parse(jsonData);
 
 var app = express();
@@ -48,18 +51,25 @@ function requestPickup(req, res){
       id: id,
 		  lat: lat,
 		  lng: lng,
-      pickedup: 0
+      completed: 0
   }
 
 	data.nodes.push(nodeObj);
-	var newData = JSON.stringify(data, null, 3);
-	fs.writeFile('nodes.json', newData, function(err){
-		if (err) throw err;
-		return;
-	});
+	// var newData = JSON.stringify(data, null, 3);
+	// fs.writeFile('nodes.json', newData, function(err){
+	// 	if (err) throw err;
+	// 	return;
+	// });
+
+  var sortedData = calculateRoute(data.nodes);
+  var newData = JSON.stringify(sortedData, null, 3);
+  fs.writeFile('nodes.json', sortedData, function(err){
+    if (err) throw err;
+    return;
+  });
 
 	res.status(200);
-	res.send(data.nodes);
+	res.send(nodeObj);
 }
 
 //Change the status on a particular node that it has been delivered
