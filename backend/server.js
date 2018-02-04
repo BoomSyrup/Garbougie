@@ -3,31 +3,54 @@ var bodyParser = require('body-parser');
 var request = require('request-promise')
 
 var fs = require('fs');
-var jsonData = fs.readFileSync('nodes.json');
 
 const $ = require('jquery');
 const ajax = require('jquery-ajax');
 
+var jsonData = fs.readFileSync('nodes.json');
 var data = JSON.parse(jsonData);
 
 var app = express();
 var server = app.listen(process.env.PORT || 8080, () => console.log('Server is running!'));
 var tt_key = process.env.TT_KEY;
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
-app.use('/static', express.static('sdk'));
+app.use(express.static('views'));
+app.use(express.static('calculate'));
+
+app.get('/calculate', calc);
+function calc(req, res){
+  res.render('calc');
+}
+
+app.post('/write', function(request, response){
+  fs.writeFile('sortedNodes.json', JSON.stringify(request.body), function(err){
+    if (err) throw err;
+    return;
+  });
+  response.send('meow');
+});
 
 //Get all
-app.get('/all', getAll);
-function getAll(req, res){
-	res.send(data.nodes);
-}
+app.get('/all', function(req, res) {
+  	res.send(data.nodes);
+});
+
+//Get all
+app.get('/sorted', function (req, res){
+  var sortedData = fs.readFileSync('sortedNodes.json');
+  var sorted = JSON.parse(sortedData);
+	res.send(sorted);
+});
 
 app.get('/node', getOne);
 function getOne(req, res){
@@ -55,18 +78,18 @@ function requestPickup(req, res){
   }
 
 	data.nodes.push(nodeObj);
-	// var newData = JSON.stringify(data, null, 3);
-	// fs.writeFile('nodes.json', newData, function(err){
-	// 	if (err) throw err;
-	// 	return;
-	// });
+	var newData = JSON.stringify(data, null, 3);
+	fs.writeFile('nodes.json', newData, function(err){
+		if (err) throw err;
+		return;
+	});
 
-  var sortedData = calculateRoute(data.nodes);
-  var newData = JSON.stringify(sortedData, null, 3);
-  fs.writeFile('nodes.json', sortedData, function(err){
-    if (err) throw err;
-    return;
-  });
+  // var sortedData = calculateRoute(data.nodes);
+  // var newData = JSON.stringify(sortedData, null, 3);
+  // fs.writeFile('nodes.json', sortedData, function(err){
+  //   if (err) throw err;
+  //   return;
+  // });
 
 	res.status(200);
 	res.send(nodeObj);
