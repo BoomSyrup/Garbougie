@@ -5,8 +5,6 @@ export default class Login extends Component{
   constructor(props){
     super(props);
     this.state = {
-      username: '',
-      password: '',
       invalidLogin: null,
     };
   }
@@ -19,7 +17,7 @@ export default class Login extends Component{
 
   	for (var i = 0; i < this.props.users.length; i++){
       if ((this.props.users[i].username === user) && (this.props.users[i].password === pass)){
-        this.props.verifyUser();
+        this.props.verifyUser(user, this.props.users[i].address);
         return;
       }
     }
@@ -29,41 +27,62 @@ export default class Login extends Component{
   renderLogin = () => {
     if (!this.state.invalidLogin){
       return (
-        // <div className="login">
-        //   <h1>Garbougie</h1>
-        //   <form className="login-form" onSubmit={this.handleLogin.bind(this)} >
-        //       <input type="text" placeholder="Username" ref="loginInput"></input>
-        //       <input type="text" placeholder="Password" ref="passwordInput"></input>
-        //       <button className="login-button">Login</button>
-        //   </form>
-        // </div>
-        <section className="hero is-info is-fullheight">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title">
-                Garbougie
-              </h1>
-              <h2 className="subtitle">
-                On-demand garbage collection
-              </h2>
-            </div>
+      
+      // <div className="login">
+      //    <h1>Garbougie</h1>
+      //     <form className="login-form" onSubmit={this.handleLogin.bind(this)} >
+      //         <input type="text" placeholder="Username" ref="loginInput"></input>
+      //         <input type="text" placeholder="Password" ref="passwordInput"></input>
+      //         <button className="login-button">Login</button>
+      //     </form>
+      //  </div>
+      <section class="hero is-info is-fullheight">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Garbougie
+            </h1>
+            <h2 class="subtitle">
+              On-demand garbage collection
+            </h2>
+            <div className="login">
+            <form className="login-form" onSubmit={this.handleLogin.bind(this)} >
+               <input type="text" placeholder="Username" ref="loginInput"></input>
+               <input type="text" placeholder="Password" ref="passwordInput"></input>
+               <br></br>
+               <button className="button login-button is-success">Login</button>
+            </form>
+             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
+
       )
     }
     if (this.state.invalidLogin === true){
       return (
-          <div className="login">
-            <h1>Garbougie</h1>
+      <section class="hero is-info is-fullheight">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Garbougie
+            </h1>
+            <h2 class="subtitle">
+              On-demand garbage collection
+            </h2>
+            <div className="login">
             <form className="login-form" onSubmit={this.handleLogin.bind(this)} >
-                <div className="input">
-                  <input type="text" placeholder="Username" ref="loginInput"></input>
-                  <input type="text" placeholder="Password" ref="passwordInput"></input>
-                </div>
-                <button >Login</button>
-                <p className="login-button">Invalid Login!</p>
+               <input type="text" placeholder="Username" ref="loginInput"></input>
+               <input type="text" placeholder="Password" ref="passwordInput"></input>
+               <br></br>
+               <button className="button is-success">Login</button>
+               <p>Invalid Login!</p>
             </form>
+             </div>
           </div>
+        </div>
+      </section>
       )
     }
   }

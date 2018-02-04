@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Login from './login';
 import RequestPickup from './request-pickup';
+import 'bulma/css/bulma.css'
+
 import './App.css';
 
 export default class App extends Component { 
@@ -8,26 +10,32 @@ export default class App extends Component {
     super(props);
     this.state = {
       users: [
-        { "username": "john", "password": "qwerty", "address": "855 city"},
-        { "username": "fred", "password": "qwerty2", "address": "322 city"}
+        { "username": "antoine", "password": "tomtom", "address": "4243 Hide A Way Road, San Jose, CA"},
+        { "username": "byron", "password": "tomtom", "address": "3770 24th St, San Francisco, CA"}
       ],
-      verified: false
+      verified: false,
+      currentUser: null,
+      currentUserAddress: null,
     };
   }
 
 
   renderSection = () => {
     if (this.state.verified === false){
-      return <Login users={this.state.users} verifyUser={this.verifyUser}/>
+      return <Login users={this.state.users} verifyUser={this.verifyUser} logOut={this.logOut}/>
     }
     else{
-      return <RequestPickup />
+      return <RequestPickup user={this.state.currentUser} address={this.state.currentUserAddress} logOut={this.logOut}/>
     }
   }
 
-  verifyUser = () => {
-    this.setState({ verified: true });
+  verifyUser = (verifiedUser, verifiedAddress) => {
+    this.setState({ verified: true, currentUser: verifiedUser, currentUserAddress: verifiedAddress });
   }
+
+  logOut = () => {
+    this.setState({ verified: false, currentUser: null, currentUserAddress: null});
+  }  
 
   render(){
     return (
