@@ -181,6 +181,17 @@ function calculateRoute(input){
             }
           }
         }
-      console.log(route);
+        var routeObject = [];
+        for(obj in input)
+        {
+          for(id in route)
+          {
+            if(id == input[obj].id)
+            {
+              routeObject.push(input[obj]);
+            }
+          }
+        }
+        console.log(routeObject);
     });
 }

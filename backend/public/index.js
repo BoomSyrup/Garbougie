@@ -28,7 +28,7 @@ for (var obj in input)
   });
 }
 
-var url = "https://api.tomtom.com/routing/1/matrix/json?key=iTs5G60ZGQRaPgZEjrf42zeYnXjyHFHUq&routeType=shortest&travelMode=truck";
+var url = "https://api.tomtom.com/routing/1/matrix/json?key=iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF&routeType=shortest&travelMode=truck";
 
 var data = {
   "origins": places,  "destinations": places
@@ -119,5 +119,21 @@ var data = {
             }
           }
         }
-      console.log(route);
+        console.log("route " + route)
+        var routeObjects = [];
+        for(id in route)
+        {
+          for(node in input)
+          {
+            if(route[id] == input[node].id)
+            {
+              console.log(route[id] + " == " + input[obj].id);
+              routeObjects.push(input[obj]);
+            }
+          }
+        }
+        for(obj in routeObjects)
+        {
+          console.log(routeObjects[obj]);
+        }
     });
