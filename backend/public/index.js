@@ -1,22 +1,22 @@
-// var input =
-// [
-//     {
-//        "id": "A",
-//        "latitude": 37.17429363,
-//        "longitude": -122.01100554
-//     },
-//     {
-//        "id": "B",
-//        "latitude": 38.07514282,
-//        "longitude": -122.32189978
-//     },
-//     {
-//        "id": "C",
-//        "latitude": 38.756443,
-//        "longitude": -123.55355851
-//     }
-//
-// ];
+var input =
+[
+    {
+       "id": "A",
+       "latitude": 37.17429363,
+       "longitude": -122.01100554
+    },
+    {
+       "id": "B",
+       "latitude": 38.07514282,
+       "longitude": -122.32189978
+    },
+    {
+       "id": "C",
+       "latitude": 38.756443,
+       "longitude": -123.55355851
+    }
+
+];
 
 var places = []; //puts points into a format that the API can understand
 var dataArr = []; //stores dataArred data from API
@@ -28,7 +28,7 @@ for (var obj in input)
   });
 }
 
-var url = "https://api.tomtom.com/routing/1/matrix/json?key=iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF&routeType=shortest&travelMode=truck";
+var url = "https://api.tomtom.com/routing/1/matrix/json?key=iTs5G60ZGQRaPgZEjrf42zeYnXjyHFHUq&routeType=shortest&travelMode=truck";
 
 var data = {
   "origins": places,  "destinations": places
