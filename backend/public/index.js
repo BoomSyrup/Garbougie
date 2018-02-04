@@ -1,90 +1,3 @@
-function PriorityQueue () {
-  this._nodes = [];
-
-  this.enqueue = function (priority, key) {
-    this._nodes.push({key: key, priority: priority });
-    this.sort();
-  };
-  this.dequeue = function () {
-    return this._nodes.shift().key;
-  };
-  this.sort = function () {
-    this._nodes.sort(function (a, b) {
-      return a.priority - b.priority;
-    });
-  };
-  this.isEmpty = function () {
-    return !this._nodes.length;
-  };
-}
-
-/**
- * Pathfinding starts here
- */
-function Graph(){
-  var INFINITY = 1/0;
-  this.vertices = {};
-
-  this.addVertex = function(name, edges){
-    this.vertices[name] = edges;
-  };
-
-  this.shortestPath = function (start, finish) {
-    var nodes = new PriorityQueue(),
-        distances = {},
-        previous = {},
-        path = [],
-        smallest, vertex, neighbor, alt;
-
-    for(vertex in this.vertices) {
-      if(vertex === start) {
-        distances[vertex] = 0;
-        nodes.enqueue(0, vertex);
-      }
-      else {
-        distances[vertex] = INFINITY;
-        nodes.enqueue(INFINITY, vertex);
-      }
-
-      previous[vertex] = null;
-    }
-
-    while(!nodes.isEmpty()) {
-      smallest = nodes.dequeue();
-
-      if(smallest === finish) {
-        path = [];
-
-        while(previous[smallest]) {
-          path.push(smallest);
-          smallest = previous[smallest];
-        }
-
-        break;
-      }
-
-      if(!smallest || distances[smallest] === INFINITY){
-        continue;
-      }
-
-      for(neighbor in this.vertices[smallest]) {
-        alt = distances[smallest] + this.vertices[smallest][neighbor];
-
-        if(alt < distances[neighbor]) {
-          distances[neighbor] = alt;
-          previous[neighbor] = smallest;
-
-          nodes.enqueue(alt, neighbor);
-        }
-      }
-    }
-
-    return path;
-  };
-}
-
-var g = new Graph();
-
 var input =
 [
     {
@@ -99,11 +12,13 @@ var input =
     },
     {
        "id": 3,
-       "latitude": 37.47966804,
-       "longitude": -123.03159302
+       "latitude": 38.756443,
+       "longitude": -123.55355851
     }
+
 ];
 
+//puts points into a format that the API can understand
 var places = [];
 
 for (var obj in input)
@@ -113,31 +28,16 @@ for (var obj in input)
   });
 }
 
+var prim = [];//will apply prim's Algorithm on the graph
+
+
 var url = "https://api.tomtom.com/routing/1/matrix/json?key=iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF&routeType=shortest&travelMode=truck";
 
 var data = {
-  "origins":[
-  {
-      "point": {"latitude": 52.36006,"longitude": 4.85106}
-  },
-  {
-      "point": {"latitude": 52.36187,"longitude": 4.85056}
-  }
-],  "destinations": [
-    {
-        "point": {"latitude": 52.36006,"longitude": 4.85106}
-    },
-    {
-        "point": {"latitude": 52.36187,"longitude": 4.85056}
-    }
-  ]
+  "origins": places,  "destinations": places
 };
 
-function success(response)
-{
-  console.log(response)
-}
-
+//gets information from the Tom Tom API
   $.ajax({
     'headers': {
     'Accept': 'application/json',
@@ -148,18 +48,31 @@ function success(response)
     'data': JSON.stringify(data),
     'dataType': 'json'
   }).done(function(data) {
-    console.log(data);
-  });
+    //parses data to create graph
+    for(row in data.matrix)
+    {
+      var point;
+      var from = {}
+      for(column in data.matrix)
+      {
+        var id = input[column].id
+        if(column != row)
+        {
+          from[id] = (data.matrix[row][column].response.routeSummary.travelTimeInSeconds + data.matrix[row][column].response.routeSummary.trafficDelayInSeconds);
+        }
+        else
+        {
+          point = id.toString();
+        }
+      }
+      prim.push({
+        point: point,
+        from : from
+      });
+    }
+    console.log(prim);
+  }).done(function()
+    {
 
 
-g.addVertex('A', {B: 7, C: 8});
-g.addVertex('B', {A: 7, F: 2});
-g.addVertex('C', {A: 8, F: 6, G: 4});
-g.addVertex('D', {F: 8});
-g.addVertex('E', {H: 1});
-g.addVertex('F', {B: 2, C: 6, D: 8, G: 9, H: 3});
-g.addVertex('G', {C: 4, F: 9});
-g.addVertex('H', {E: 1, F: 3});
-
-// Log test, with the addition of reversing the path and prepending the first node so it's more readable
-g.shortestPath('A', 'H').concat(['A']).reverse();
+    });
