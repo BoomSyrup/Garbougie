@@ -1,111 +1,26 @@
-function PriorityQueue () {
-  this._nodes = [];
-
-  this.enqueue = function (priority, key) {
-    this._nodes.push({key: key, priority: priority });
-    this.sort();
-  };
-  this.dequeue = function () {
-    return this._nodes.shift().key;
-  };
-  this.sort = function () {
-    this._nodes.sort(function (a, b) {
-      return a.priority - b.priority;
-    });
-  };
-  this.isEmpty = function () {
-    return !this._nodes.length;
-  };
-}
-
-/**
- * Pathfinding starts here
- */
-function Graph(){
-  var INFINITY = 1/0;
-  this.vertices = {};
-
-  this.addVertex = function(name, edges){
-    this.vertices[name] = edges;
-  };
-
-  this.shortestPath = function (start, finish) {
-    var nodes = new PriorityQueue(),
-        distances = {},
-        previous = {},
-        path = [],
-        smallest, vertex, neighbor, alt;
-
-    for(vertex in this.vertices) {
-      if(vertex === start) {
-        distances[vertex] = 0;
-        nodes.enqueue(0, vertex);
-      }
-      else {
-        distances[vertex] = INFINITY;
-        nodes.enqueue(INFINITY, vertex);
-      }
-
-      previous[vertex] = null;
-    }
-
-    while(!nodes.isEmpty()) {
-      smallest = nodes.dequeue();
-
-      if(smallest === finish) {
-        path = [];
-
-        while(previous[smallest]) {
-          path.push(smallest);
-          smallest = previous[smallest];
-        }
-
-        break;
-      }
-
-      if(!smallest || distances[smallest] === INFINITY){
-        continue;
-      }
-
-      for(neighbor in this.vertices[smallest]) {
-        alt = distances[smallest] + this.vertices[smallest][neighbor];
-
-        if(alt < distances[neighbor]) {
-          distances[neighbor] = alt;
-          previous[neighbor] = smallest;
-
-          nodes.enqueue(alt, neighbor);
-        }
-      }
-    }
-
-    return path;
-  };
-}
-
-var g = new Graph();
-
 var input =
 [
     {
-       "id": 1,
+       "id": "A",
        "latitude": 37.17429363,
        "longitude": -122.01100554
     },
     {
-       "id": 2,
+       "id": "B",
        "latitude": 38.07514282,
        "longitude": -122.32189978
     },
     {
-       "id": 3,
-       "latitude": 37.47966804,
-       "longitude": -123.03159302
+       "id": "C",
+       "latitude": 38.756443,
+       "longitude": -123.55355851
     }
+
 ];
 
-var places = [];
-
+var places = []; //puts points into a format that the API can understand
+var dataArr = []; //stores dataArred data from API
+var route = []; //route to send back to user in sorted order
 for (var obj in input)
 {
   places.push({
@@ -116,28 +31,10 @@ for (var obj in input)
 var url = "https://api.tomtom.com/routing/1/matrix/json?key=iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF&routeType=shortest&travelMode=truck";
 
 var data = {
-  "origins":[
-  {
-      "point": {"latitude": 52.36006,"longitude": 4.85106}
-  },
-  {
-      "point": {"latitude": 52.36187,"longitude": 4.85056}
-  }
-],  "destinations": [
-    {
-        "point": {"latitude": 52.36006,"longitude": 4.85106}
-    },
-    {
-        "point": {"latitude": 52.36187,"longitude": 4.85056}
-    }
-  ]
+  "origins": places,  "destinations": places
 };
 
-function success(response)
-{
-  console.log(response)
-}
-
+//gets data from the Tom Tom API
   $.ajax({
     'headers': {
     'Accept': 'application/json',
@@ -149,17 +46,68 @@ function success(response)
     'dataType': 'json'
   }).done(function(data) {
     console.log(data);
-  });
-
-
-g.addVertex('A', {B: 7, C: 8});
-g.addVertex('B', {A: 7, F: 2});
-g.addVertex('C', {A: 8, F: 6, G: 4});
-g.addVertex('D', {F: 8});
-g.addVertex('E', {H: 1});
-g.addVertex('F', {B: 2, C: 6, D: 8, G: 9, H: 3});
-g.addVertex('G', {C: 4, F: 9});
-g.addVertex('H', {E: 1, F: 3});
-
-// Log test, with the addition of reversing the path and prepending the first node so it's more readable
-g.shortestPath('A', 'H').concat(['A']).reverse();
+    //parse data
+    for(row in data.matrix)
+    {
+      var point;
+      var times = {};
+      for(column in data.matrix)
+      {
+        var id = input[column].id
+        if(column != row)
+        {
+          times[id] = (data.matrix[row][column].response.routeSummary.travelTimeInSeconds + data.matrix[row][column].response.routeSummary.trafficDelayInSeconds);
+        }
+        else {
+          point = id;
+        }
+      }
+      dataArr.push(
+        JSON.stringify({
+        id : point,
+        times : times
+      }));
+    }
+  }).done(function()
+    {
+      for(obj in dataArr)
+      {
+        dataArr[obj] = JSON.parse(dataArr[obj]);
+        console.log(dataArr[obj]);
+      }
+      var start = 0, //whenever given input, the first point is the starting location of the truck
+          next = 0,
+          min = Number.MAX_VALUE;
+      while(dataArr.length > 0)
+      {
+        //find closest stop
+          for(time in dataArr[start].times)
+          {
+            console.log(time);
+            if(dataArr[start].times.time < min && dataArr[start].times.time != undefined)
+            {
+              min = dataArr[start].times.time;
+              next = time;
+            }
+          }
+          route.push(dataArr[start].id);
+          dataArr.splice(start, 1); //delete old starting point from available points
+          next = dataArr.indexOf(time);
+          start = next;
+          for(element in dataArr)
+          {
+            for(key in element)
+            if (dataArr[element].hasOwnProperty(key))
+            {
+              if(key == next)
+              {
+                delete dataArr[element].key;//delete all values of next point so that it won't be added to route multiple times
+              }
+            }
+          }
+          for(obj in dataArr)
+            console.log(dataArr[obj]);
+          console.log(route);
+        }
+      console.log(route);
+    });
