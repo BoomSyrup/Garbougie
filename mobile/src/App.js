@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Login from './login';
 import RequestPickup from './request-pickup';
+import 'bulma/css/bulma.css'
+
 import './App.css';
 
 export default class App extends Component { 
@@ -8,10 +10,12 @@ export default class App extends Component {
     super(props);
     this.state = {
       users: [
-        { "username": "john", "password": "qwerty", "address": "855 city"},
+        { "username": "john", "password": "qwerty", "address": "855 Monty Circle, Santa Clara, CA"},
         { "username": "fred", "password": "qwerty2", "address": "322 city"}
       ],
-      verified: false
+      verified: false,
+      currentUser: null,
+      currentUserAddress: null,
     };
   }
 
@@ -21,12 +25,12 @@ export default class App extends Component {
       return <Login users={this.state.users} verifyUser={this.verifyUser}/>
     }
     else{
-      return <RequestPickup />
+      return <RequestPickup user={this.state.currentUser} address={this.state.currentUserAddress} />
     }
   }
 
-  verifyUser = () => {
-    this.setState({ verified: true });
+  verifyUser = (verifiedUser, verifiedAddress) => {
+    this.setState({ verified: true, currentUser: verifiedUser, currentUserAddress: verifiedAddress });
   }
 
   render(){
