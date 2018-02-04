@@ -83,8 +83,8 @@ var data = {
         //find closest stop
           for(time in dataArr[start].times)
           {
-            console.log(time);
-            if(dataArr[start].times.time < min && dataArr[start].times.time != undefined)
+            console.log(dataArr[start].times, "\n",dataArr[start].times.time);
+            if(dataArr[start].times.time < min)
             {
               min = dataArr[start].times.time;
               next = time;
@@ -92,7 +92,7 @@ var data = {
           }
           route.push(dataArr[start].id);
           dataArr.splice(start, 1); //delete old starting point from available points
-          next = dataArr.indexOf(time);
+          next = dataArr.indexOf(next);
           start = next;
           for(element in dataArr)
           {
@@ -105,9 +105,6 @@ var data = {
               }
             }
           }
-          for(obj in dataArr)
-            console.log(dataArr[obj]);
-          console.log(route);
         }
       console.log(route);
     });
