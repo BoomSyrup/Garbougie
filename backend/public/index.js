@@ -1,26 +1,26 @@
 var input =
 [
     {
-       "id": 1,
+       "id": "A",
        "latitude": 37.17429363,
        "longitude": -122.01100554
     },
     {
-       "id": 2,
+       "id": "B",
        "latitude": 38.07514282,
        "longitude": -122.32189978
     },
     {
-       "id": 3,
+       "id": "C",
        "latitude": 38.756443,
        "longitude": -123.55355851
     }
 
 ];
 
-//puts points into a format that the API can understand
-var places = [];
-
+var places = []; //puts points into a format that the API can understand
+var dataArr = []; //stores dataArred data from API
+var route = []; //route to send back to user in sorted order
 for (var obj in input)
 {
   places.push({
@@ -28,16 +28,13 @@ for (var obj in input)
   });
 }
 
-var prim = [];//will apply prim's Algorithm on the graph
-
-
 var url = "https://api.tomtom.com/routing/1/matrix/json?key=iKNkC5W8ARvRHaAbiVUE5kT3P45IGXtF&routeType=shortest&travelMode=truck";
 
 var data = {
   "origins": places,  "destinations": places
 };
 
-//gets information from the Tom Tom API
+//gets data from the Tom Tom API
   $.ajax({
     'headers': {
     'Accept': 'application/json',
@@ -48,31 +45,69 @@ var data = {
     'data': JSON.stringify(data),
     'dataType': 'json'
   }).done(function(data) {
-    //parses data to create graph
+    console.log(data);
+    //parse data
     for(row in data.matrix)
     {
       var point;
-      var from = {}
+      var times = {};
       for(column in data.matrix)
       {
         var id = input[column].id
         if(column != row)
         {
-          from[id] = (data.matrix[row][column].response.routeSummary.travelTimeInSeconds + data.matrix[row][column].response.routeSummary.trafficDelayInSeconds);
+          times[id] = (data.matrix[row][column].response.routeSummary.travelTimeInSeconds + data.matrix[row][column].response.routeSummary.trafficDelayInSeconds);
         }
-        else
-        {
-          point = id.toString();
+        else {
+          point = id;
         }
       }
-      prim.push({
-        point: point,
-        from : from
-      });
+      dataArr.push(
+        JSON.stringify({
+        id : point,
+        times : times
+      }));
     }
-    console.log(prim);
   }).done(function()
     {
-
-
+      for(obj in dataArr)
+      {
+        dataArr[obj] = JSON.parse(dataArr[obj]);
+        console.log(dataArr[obj]);
+      }
+      var start = 0, //whenever given input, the first point is the starting location of the truck
+          next = 0,
+          min = Number.MAX_VALUE;
+      while(dataArr.length > 0)
+      {
+        //find closest stop
+          for(time in dataArr[start].times)
+          {
+            console.log(time);
+            if(dataArr[start].times.time < min && dataArr[start].times.time != undefined)
+            {
+              min = dataArr[start].times.time;
+              next = time;
+            }
+          }
+          route.push(dataArr[start].id);
+          dataArr.splice(start, 1); //delete old starting point from available points
+          next = dataArr.indexOf(time);
+          start = next;
+          for(element in dataArr)
+          {
+            for(key in element)
+            if (dataArr[element].hasOwnProperty(key))
+            {
+              if(key == next)
+              {
+                delete dataArr[element].key;//delete all values of next point so that it won't be added to route multiple times
+              }
+            }
+          }
+          for(obj in dataArr)
+            console.log(dataArr[obj]);
+          console.log(route);
+        }
+      console.log(route);
     });
