@@ -14,6 +14,9 @@ The app consists of a Web App front end client for the user, a front end client 
 ## Authors
 
 **Kishan Emens**(https://github.com/phi-line)
+
 **Byron White**(https://github.com/BoomSyrup/)
+
 **Juliana Duperron**(https://github.com/Mayiyan)
+
 **Antoine Vo**(https://github.com/AntVo/)
