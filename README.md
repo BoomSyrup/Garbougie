@@ -4,6 +4,12 @@ Garbougie is an on demand garbage collection app built for Developer Week Hackat
 
 The app consists of a Web App front end client for the user, a front end client for the Trucker, and a backend API that communicates between our clients and calculates optimal routes.
 
+## Screenshots
+### Screenshots
+|  **Login** |  **Pick Up**  | **En Route** |
+|:---:|:---:|:---:|
+| ![login](https://raw.githubusercontent.com/phi-line/Garbougie/master/docs/login.png) | ![pick_up](https://raw.githubusercontent.com/phi-line/Garbougie/master/docs/pick_up.png) | ![en_route](https://raw.githubusercontent.com/phi-line/Garbougie/master/docs/en_route.png)
+
 ## Built With
 
 * [React](https://reactjs.org/) - Front End Javascript framework used to build the User Client.
